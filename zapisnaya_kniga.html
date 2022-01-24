@@ -32,7 +32,7 @@
     </tr>
   </thead>
   <tbody id="tbody">
- 
+  	
   </tbody>
 </table>
 
@@ -103,6 +103,7 @@ function addDataToTable() {
 }
 tbody.addEventListener('dblclick', initEditDataInTable);
 	function initEditDataInTable(e) {
+		e.preventDefault();
 	 	if (e.target.nodeName == 'TD') {
 	 		let editableDate = e.target.parentNode.children[0].innerHTML;
 	 		e.target.parentNode.children[0].innerHTML = ''
